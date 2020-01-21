@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
 
 import { NgxZendeskWebwidgetConfig } from './ngx-zendesk-webwidget.model';
+import {Injectable} from '@angular/core';
 
 function getWindow(): any {
   return window;
