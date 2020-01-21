@@ -2,6 +2,9 @@
   "name": "ngx-zendesk-webwidget",
   "version": "2.1.0",
   "scripts": {
+    "precommit": [
+      "build"
+    ],
     "build": "gulp build",
     "build:watch": "gulp",
     "docs": "npm run docs:build",
