@@ -1,7 +1,7 @@
 export abstract class NgxZendeskWebwidgetConfig {
   lazyLoad: boolean;
   timeOut: number;
-  injectionTag: 'head' | 'body' | 'script' | string;
+  injectionTag: string;
   abstract accountUrl: string;
   abstract callback(zE): any;
 }
