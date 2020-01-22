@@ -72,13 +72,21 @@ var NgxZendeskWebwidgetService = /** @class */ (function () {
             /** @type {?} */
             var a = [];
             /** @type {?} */
-            var r = document.createElement("iframe");
+            var tag = 'head';
+            /** @type {?} */
+            var r = document.createElement('iframe');
+            try {
+                tag = this.ngxZendeskWebwidgetConfig.injectionTag;
+            }
+            catch (e) {
+                tag = 'head';
+            }
             window.zEmbed = (/**
              * @return {?}
              */
             function () {
                 a.push(arguments);
-            }), window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.style.cssText = "display: none", d = document.getElementsByTagName(this.ngxZendeskWebwidgetConfig.injectionTag || "head"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+            }), window.zE = window.zE || window.zEmbed, r.src = 'javascript:false', r.title = '', r.style.cssText = 'display: none', document.getElementsByTagName(tag), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
             try {
                 o = s;
             }
@@ -90,8 +98,8 @@ var NgxZendeskWebwidgetService = /** @class */ (function () {
              */
             function () {
                 /** @type {?} */
-                var e = this.createElement("script");
-                n && (this.domain = n), e.id = "js-iframe-async", e.src = "https://assets.zendesk.com/embeddable_framework/main.js", this.t = +new Date, this.zendeskHost = config.accountUrl, this.zEQueue = a, this.body.appendChild(e);
+                var e = this.createElement('script');
+                n && (this.domain = n), e.id = 'js-iframe-async', e.src = 'https://assets.zendesk.com/embeddable_framework/main.js', this.t = +new Date, this.zendeskHost = config.accountUrl, this.zEQueue = a, this.body.appendChild(e);
             }), o.write('<body onload="document._l();">'), o.close();
         })();
         // tslint:enable
