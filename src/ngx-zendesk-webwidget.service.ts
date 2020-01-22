@@ -44,7 +44,7 @@ export class NgxZendeskWebwidgetService {
                 r.src = 'javascript:false',
                 r.title = '',
                 r.style.cssText = 'display: none',
-                document.getElementsByTagName(tag),
+                d= document.getElementsByTagName(tag),
                 d = d[d.length - 1],
                 d.parentNode.insertBefore(r, d),
                 i = r.contentWindow,

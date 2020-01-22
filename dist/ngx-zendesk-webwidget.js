@@ -83,7 +83,7 @@ var NgxZendeskWebwidgetService = /** @class */ (function () {
              */
             function () {
                 a.push(arguments);
-            }), window.zE = window.zE || window.zEmbed, r.src = 'javascript:false', r.title = '', r.style.cssText = 'display: none', document.getElementsByTagName(tag), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+            }), window.zE = window.zE || window.zEmbed, r.src = 'javascript:false', r.title = '', r.style.cssText = 'display: none', d = document.getElementsByTagName(tag), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
             try {
                 o = s;
             }
